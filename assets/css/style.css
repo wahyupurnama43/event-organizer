@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+:root{
+    --color: #292D32;
+    --primary : #7848F4;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--color);
+    font-weight: 500;
+}
+body{
+    overflow-x: hidden !important;
+}
+a{
+    text-decoration: none !important;
+}
+.shadow-primary{
+    box-shadow: 0px 14px 31px rgba(243, 243, 243, 0.25);
+}
+.menu {
+    padding: 1.7rem 5rem;
+    width: 100%;
+    height: auto;
+    z-index: 99;
+}
+
+
+    .menu ul li {
+        padding: 20px 0;
+    }
+    .menu ul a.btn {
+        margin: 20px 0;
+    }
+    .menu ul {
+        display: flex;
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: #fff;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all 1s;
+    }
+    .menu ul.slide {
+        opacity: 1;
+        transform: translateY(0);
+        background: #fff;
+    }
+.shActive {
+    background: #fff;
+    box-shadow: 3px 1px 20px 3px rgba(175, 175, 175, 0.25);
+}
+
+nav ul li a.active{
+    color: rgb(3, 1, 1) !important;
+    font-weight: 600;
+}
+nav ul li a:hover {
+    color: rgb(22, 22, 22);
+}
+nav ul li{
+    transition: all 1s;
+}
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+nav ul li a {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    color: #595e74;
+}
+.logo-img img {
+    width: 60px;
+    margin-right: 2rem;
+}
+/*navbar */
+.menu .brand {
+    font-size: 1.2em;
+    color: #333;
+}
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+/*hummberger menu */
+.menu-toggle {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: relative;
+}
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #000;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+.menu-toggle input {
+    display: block;
+    position: absolute;
+    background-color: #000;
+    width: 40px;
+    height: 28px;
+    left: -10px;
+    top: -4px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 99;
+}
+
+/*hummbuger animation*/
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: #000;
+    z-index: 2;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: #000;
+    z-index: 2;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* carousel */
+.overlay{
+    content: '';
+    background: rgba(0, 0,0,.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.text-header-title{
+    font-size: 60px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 5rem;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+.text-header-sub{
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    color: rgb(233, 214, 214);
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+.text-content-title{
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 57px;
+    color: var(--color);
+}
+.w-55{
+    width: 500px;
+}
+.text-content-sub{
+    font-size: 17px;
+    line-height: 24px;
+    color: #4F4F4F;
+
+}
+.btn-primary{
+    background: #7848F4 !important;
+    border-radius: 8.52857px !important;
+    padding: 7.10714px 20px !important;
+    font-weight: 500 !important;
+    border-color:var(--primary) !important;
+}
+.transition-scale{
+    transition: all .5s !important;
+}
+.transition-scale:hover{
+    transform: scale(1.1);
+}
+.card-portfolio{
+    box-shadow: 0px 33px 128px rgba(107, 106, 106, 0.04), 0px 5.77084px 5.91104px rgba(107, 106, 106, 0.00919395);
+    border-radius: 10px;
+}
+.kategori p{
+    position: absolute;
+    top: -.9rem;
+    left: 0;
+    background: var(--primary);
+    width: auto;
+    padding: 5px  10px !important;
+    border-radius: 0px 10.7338px 10.7338px 0px;
+    font-weight: medium;
+    font-size: 14px;
+    line-height: 20px;
+    color :#fff;
+}
+.card-body{
+    padding :1rem 0px !important;
+}
+.card-title{
+    margin-top: 1rem;
+    font-size: 17px;
+    color: var(--color);
+    font-weight: bold;
+}
+.date{
+    padding: 0 20px;
+    text-align: center;
+}
+.date h6{
+    font-size: 18px;
+    color: var(--primary);
+    font-weight: 800;
+}
+.date p{
+    font-weight: 600;
+    font-size: 17px;
+    color: #131314;
+
+}
+.text-card{
+    padding-right: 10px;
+}
+.card-title{
+    font-size: 17px;
+}
+.text-card {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #4F4F4F;
+}
+.img-card-parent{
+    width: 100%;
+    height: 265.17px;
+    overflow: hidden;
+    /* margin: 0 auto; */
+}
+.img-card{
+    width: 100%; 
+    border-radius: 10px 10px 0 0; 
+    height: 100%;
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -ms-transition: all .7s ease;
+    transition: all .7s ease;
+}
+.img-card:hover{
+    border-radius: 10px 10px 0 0; 
+    transform: scale(1.1);
+}
+.mobile-show{
+    display: none;
+}
+.reservation{
+    margin-top: 4rem;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('./../img/reservation.jpg');
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.reservation h6{
+    font-weight: normal;
+    font-size: 30px;
+    color: #FFFFFF;
+
+}
+.reservation a{
+    font-weight: 700 !important;
+}
+.btn-primary-second{
+    color: var(--primary) !important;
+    background: #FFFFFF !important;
+    border-radius: 8.52857px !important;
+    padding: 7.10714px 20px !important;
+    font-weight: 500 !important;
+    border-color: #FFFFFF !important;
+}
+
+footer{
+    text-align: center;
+    margin:3rem 0;
+}
+footer h6{
+    margin-top: 1rem;
+    font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+
+color: #343434;
+}
+footer p{
+    font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+
+color: #343434;
+
+}
+.sosmed i{
+    font-size: 1.5rem;
+    padding: 0 .5rem;
+    color: var(--color);
+    cursor: pointer;
+}
+.text-header{
+    position: absolute;
+    top :50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.mt-6{
+    margin-top: 3rem;
+}
+
+/* portfolio */
+.mt-7{
+    margin-top: 8rem;
+}
+span.hr{
+    content: "";
+    width: 100px;
+    height: 3px;
+    border-radius: 30px;
+    background: var(--primary);
+    margin-bottom: 20px;
+}
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff !important;
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+.page-link{
+    color: var(--color) !important;
+}
+.about p{
+    font-size: 18px;
+}
+.text-header-detail{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-header-detail h1, .text-header-detail p, .text-header-detail i{
+    color: #FFFFFF;
+}
+.text-header-detail i{
+    padding-right: 10px;
+}
+.text-header-detail h1{
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 81px;
+    text-align: center;
+}
+.deskripsi h1{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #131215;
+}
+.deskripsi p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+
+    color: #665656;
+
+}
+.sosmed h1{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #131215;
+}
+.sosmed a{
+    padding: 10px;
+}
+.mt-8{
+    margin-top: 40px;
+}
+.-mt-8{
+    margin-top: 20px !important;
+}
+.text-header-detail{
+    width: 90%;
+}
+
+@media (max-width:991px) {
+    .about-row{
+        flex-direction: column-reverse;
+    }
+    .about-row img{
+        padding-bottom: 2rem;
+    }
+}
+    
+@media (max-width:902px) {
+    .text-header{
+        width: 70%;
+        
+    }
+    .text-header-title{
+        font-size: 55px;
+    }
+    
+}    
+@media (max-width:700px) {
+    .mt-8{
+        margin-top: 20px;
+    }
+    .img{
+        height: 500px!important;
+    }
+    .deskripsi h1, .sosmed h1{
+        font-size: 20px;
+    }
+    .deskripsi p{
+        font-size: 13px;
+    }
+    footer{
+        padding: 0 20px;
+    }
+    
+    
+}@media (max-width:755px) {
+    .text-header-detail{
+        width: 100% !important;
+    }
+    .text-header-detail h1{
+        padding:  10px 0;
+        font-size: 40px;
+        line-height: 40px !important;
+    }
+    
+    .text-header-detail p{
+        font-size: 14px;
+    }
+    .text-header-title{
+        font-size: 45px;
+    } 
+    .reservation h6{
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+    .text-content-title{
+        font-size: 2em;
+    }
+    .text-content-sub{
+        width: 90% !important;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+    .mt-6{
+        margin-top: 1rem!important;
+    }
+    .menu{
+        padding: 1.7rem 1rem;
+    }
+    .w-55{
+        width: 100%;
+    }
+    .desktop-show{
+        display: none;
+    }
+    .mobile-show{
+        display: block;
+        margin:0 auto;
+        text-align: center;
+    }
+    .text-content-title,.text-content-sub{
+        text-align: center;
+    }
+}
+@media (max-width:500px){
+    .text-header{
+        width: 90% !important;
+    }
+    .text-header-title{
+        font-size: 30px;
+    }
+}
